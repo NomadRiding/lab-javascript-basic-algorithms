@@ -76,3 +76,25 @@ for(i = 0; i < longText.trim().length + 1; i++){
     }
 }
 console.log(wordCount);
+
+
+//I don't kow how to code Bonus 2 without the use of a method.
+
+//Bonus 2
+
+let phrases = ["A man, a plan, a canal, Panama!", "Amor, Roma", "race car", "stack cats", "step on no pets", "taco cat", "put it up", "Was it a car or a cat I saw?", "No 'x' in Nixon"];
+for(let i = 0; i < phrases.length; i++){
+    let phraseToCheck = phrases[i];
+    
+    let cleanUp = phraseToCheck.toLowerCase().replace(/[^a-z0-9]/g, "")
+    let isPalindrome = true;
+    
+    for(let i = 0; i < cleanUp.length / 2; i++){
+        if(cleanUp[i] !== cleanUp[cleanUp.length - 1 - i]){
+            isPalindrome = false;
+            break;
+        }
+}
+console.log(isPalindrome);
+}
+
